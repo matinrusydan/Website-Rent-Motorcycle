@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rental Motor - Sewa Motor Terpercaya</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
     <!-- Header -->
@@ -127,12 +128,141 @@
         </div>
     </section>
 
+
+ <!-- Form Testimoni Section -->
+    <section class="form-testimoni-section">
+        <div class="container">
+            <h2>Bagikan Pengalaman Anda</h2>
+            <p class="section-subtitle">Ceritakan pengalaman Anda menggunakan layanan rental motor kami</p>
+            
+            <div class="comment-form-wrapper" id="commentForm">
+                <div class="user-info">
+                    <div class="user-avatar">AR</div>
+                    <div class="user-details">
+                        <h4>Ahmad Rizki</h4>
+                        <p>ahmad.rizki@email.com</p>
+                    </div>
+                </div>
+                
+                <div class="rating-section">
+                    <label class="rating-label">Berikan rating Anda</label>
+                    <div class="star-rating">
+                        <input type="radio" name="rating" value="5" id="star5">
+                        <label for="star5">★</label>
+                        <input type="radio" name="rating" value="4" id="star4">
+                        <label for="star4">★</label>
+                        <input type="radio" name="rating" value="3" id="star3">
+                        <label for="star3">★</label>
+                        <input type="radio" name="rating" value="2" id="star2">
+                        <label for="star2">★</label>
+                        <input type="radio" name="rating" value="1" id="star1">
+                        <label for="star1">★</label>
+                        <span class="rating-text">Pilih rating Anda</span>
+                    </div>
+                </div>
+                
+                <textarea 
+                    class="comment-input" 
+                    id="commentText"
+                    placeholder="Tulis pengalaman Anda menggunakan layanan rental motor kami..."
+                    maxlength="500"></textarea>
+                
+                <div class="comment-footer">
+                    <div class="char-counter">
+                        <span id="charCount">0</span>/500 karakter
+                    </div>
+                    <button type="button" class="submit-btn" id="submitBtn">
+                        Kirim Testimoni
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message">
+                <div class="success-icon">✓</div>
+                <h3>Terima Kasih!</h3>
+                <p>Testimoni Anda telah berhasil dikirim dan akan ditampilkan setelah diverifikasi.</p>
+                <button type="button" class="btn-secondary" onclick="resetForm()">Tulis Testimoni Lagi</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimoni Section -->
-    <section id="testimoni" class="testimoni-section">
+    <section class="testimoni-section">
         <div class="container">
             <h2>Testimoni Pelanggan</h2>
-            <div class="testimoni-grid" id="testimoniGrid">
-                <!-- Testimoni akan diisi oleh JavaScript -->
+            <div class="comments-count">5 COMMENTS</div>
+            
+            <div class="comments-container">
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <div class="comment-avatar">DS</div>
+                        <div class="comment-info">
+                            <h4>Dina Sari</h4>
+                            <div class="comment-meta">
+                                <div class="comment-rating">★★★★★</div>
+                                <div class="comment-date">June 15, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment-text">Pelayanan sangat memuaskan! Motor dalam kondisi prima dan proses penyewaan sangat mudah. Staff yang ramah dan profesional. Pasti akan menggunakan layanan ini lagi untuk perjalanan selanjutnya. Highly recommended!</p>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <div class="comment-avatar">BW</div>
+                        <div class="comment-info">
+                            <h4>Budi Wicaksono</h4>
+                            <div class="comment-meta">
+                                <div class="comment-rating">★★★★★</div>
+                                <div class="comment-date">June 12, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment-text">Harga terjangkau dengan kualitas motor yang bagus. Proses rental cepat dan tidak ribet. Motor bersih dan terawat dengan baik. Terima kasih atas pelayanannya!</p>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <div class="comment-avatar">SM</div>
+                        <div class="comment-info">
+                            <h4>Sari Melati</h4>
+                            <div class="comment-meta">
+                                <div class="comment-rating">★★★★☆</div>
+                                <div class="comment-date">June 10, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment-text">Pengalaman rental yang menyenangkan. Motor Honda Beat yang saya sewa sangat irit bensin dan nyaman dikendarai. Lokasi strategis dan mudah dijangkau. Good job!</p>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <div class="comment-avatar">RH</div>
+                        <div class="comment-info">
+                            <h4>Rina Handayani</h4>
+                            <div class="comment-meta">
+                                <div class="comment-rating">★★★★★</div>
+                                <div class="comment-date">June 8, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment-text">Sangat puas dengan layanan rental motor ini. Yamaha NMAX yang saya sewa dalam kondisi excellent. Proses booking online sangat mudah dan customer service responsif. Will definitely come back!</p>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <div class="comment-avatar">AF</div>
+                        <div class="comment-info">
+                            <h4>Agus Firmansyah</h4>
+                            <div class="comment-meta">
+                                <div class="comment-rating">★★★★☆</div>
+                                <div class="comment-date">June 5, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment-text">Pelayanan bagus dan motor berkualitas. Hanya saja waktu pengambilan agak lama karena antrian. Tapi overall pengalaman yang memuaskan. Terima kasih!</p>
+                </div>
             </div>
         </div>
     </section>
@@ -209,6 +339,120 @@
         </div>
     </div>
 
+
+
     <script src="js/script.js"></script>
+    <script>
+        // Character counter
+        const commentText = document.getElementById('commentText');
+        const charCount = document.getElementById('charCount');
+        
+        commentText.addEventListener('input', function() {
+            const count = this.value.length;
+            charCount.textContent = count;
+            
+            if (count > 450) {
+                charCount.style.color = 'var(--accent-color)';
+            } else {
+                charCount.style.color = 'var(--gray-500)';
+            }
+        });
+
+        // Star rating functionality
+        const stars = document.querySelectorAll('.star-rating input');
+        const ratingText = document.querySelector('.rating-text');
+        
+        const ratingLabels = {
+            1: 'Sangat Buruk',
+            2: 'Buruk', 
+            3: 'Cukup',
+            4: 'Baik',
+            5: 'Sangat Baik'
+        };
+
+        stars.forEach(star => {
+            star.addEventListener('change', function() {
+                ratingText.textContent = ratingLabels[this.value];
+                ratingText.style.color = 'var(--primary-color)';
+            });
+        });
+
+        // Form submission
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const rating = document.querySelector('input[name="rating"]:checked');
+            const testimonial = document.getElementById('commentText').value.trim();
+            
+            if (!rating || !testimonial) {
+                alert('Mohon berikan rating dan tulis testimoni Anda');
+                return;
+            }
+            
+            // Show loading state
+            this.innerHTML = 'Mengirim...';
+            this.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                document.getElementById('commentForm').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // Add new comment to the list
+                addNewComment(rating.value, testimonial);
+                
+                // Reset button
+                this.innerHTML = 'Kirim Testimoni';
+                this.disabled = false;
+            }, 2000);
+        });
+
+        // Add new comment to the list
+        function addNewComment(rating, text) {
+            const commentsContainer = document.querySelector('.comments-container');
+            const starsHtml = '★'.repeat(parseInt(rating)) + '☆'.repeat(5 - parseInt(rating));
+            
+            const newComment = document.createElement('div');
+            newComment.className = 'comment-item';
+            newComment.style.opacity = '0';
+            newComment.innerHTML = `
+                <div class="comment-header">
+                    <div class="comment-avatar">AR</div>
+                    <div class="comment-info">
+                        <h4>Ahmad Rizki</h4>
+                        <div class="comment-meta">
+                            <div class="comment-rating">${starsHtml}</div>
+                            <div class="comment-date">Baru saja</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="comment-text">${text}</p>
+            `;
+            
+            commentsContainer.insertBefore(newComment, commentsContainer.firstChild);
+            
+            // Update comments count
+            const currentCount = document.querySelector('.comments-count');
+            const count = parseInt(currentCount.textContent) + 1;
+            currentCount.textContent = `${count} COMMENTS`;
+            
+            // Animate new comment
+            setTimeout(() => {
+                newComment.style.transition = 'opacity 0.5s ease';
+                newComment.style.opacity = '1';
+            }, 100);
+        }
+
+        // Reset form
+        function resetForm() {
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('commentForm').style.display = 'block';
+            
+            // Clear form
+            document.getElementById('commentText').value = '';
+            document.getElementById('charCount').textContent = '0';
+            document.querySelectorAll('input[name="rating"]').forEach(input => input.checked = false);
+            document.querySelector('.rating-text').textContent = 'Pilih rating Anda';
+            document.querySelector('.rating-text').style.color = 'var(--gray-500)';
+        }
+    </script>
 </body>
 </html>
