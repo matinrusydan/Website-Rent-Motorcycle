@@ -19,7 +19,7 @@
                     <a href="#beranda">Beranda</a>
                     <a href="#motor">Motor</a>
                     <a href="#testimoni">Testimoni</a>
-                    <a href="#kontak">Kontak</a>
+                    <a href="#tentang">Tentang</a>
                 </div>
                 <div class="auth-buttons">
                     <a href="login.html" class="btn-login">Login</a>
@@ -52,26 +52,81 @@
                 <div class="category">
                     <h3>Honda</h3>
                     <div class="motor-grid">
-                        <div class="motor-card">
-                            <div class="motor-image">🏍️</div>
-                            <h4>Honda Beat</h4>
-                            <p class="price">Rp 80.000/hari</p>
-                            <p class="specs">110cc • Matic • Hemat BBM</p>
-                            <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Beat')">Reservasi</button>
+                        <div class="motor-slider" id="hondaSlider">
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda Beat</h4>
+                                    <p class="price">Rp 80.000/hari</p>
+                                    <p class="specs">110cc • Matic • Hemat BBM</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Beat')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda Vario</h4>
+                                    <p class="price">Rp 90.000/hari</p>
+                                    <p class="specs">125cc • Matic • Modern</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Vario')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda PCX</h4>
+                                    <p class="price">Rp 120.000/hari</p>
+                                    <p class="specs">150cc • Matic • Premium</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'PCX')">Reservasi</button>
+                                </div>
+                            </div>
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda Scoopy</h4>
+                                    <p class="price">Rp 85.000/hari</p>
+                                    <p class="specs">110cc • Matic • Stylish</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Scoopy')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda ADV 150</h4>
+                                    <p class="price">Rp 130.000/hari</p>
+                                    <p class="specs">150cc • Matic • Adventure</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'ADV 150')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda Genio</h4>
+                                    <p class="price">Rp 95.000/hari</p>
+                                    <p class="specs">110cc • Matic • Trendy</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Genio')">Reservasi</button>
+                                </div>
+                            </div>
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda Forza</h4>
+                                    <p class="price">Rp 150.000/hari</p>
+                                    <p class="specs">250cc • Matic • Luxury</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Forza')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda CB150R</h4>
+                                    <p class="price">Rp 120.000/hari</p>
+                                    <p class="specs">150cc • Manual • Sport</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'CB150R')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Honda CRF150L</h4>
+                                    <p class="price">Rp 140.000/hari</p>
+                                    <p class="specs">150cc • Manual • Trail</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'CRF150L')">Reservasi</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="motor-card">
-                            <div class="motor-image">🏍️</div>
-                            <h4>Honda Vario</h4>
-                            <p class="price">Rp 90.000/hari</p>
-                            <p class="specs">125cc • Matic • Modern</p>
-                            <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Vario')">Reservasi</button>
-                        </div>
-                        <div class="motor-card">
-                            <div class="motor-image">🏍️</div>
-                            <h4>Honda PCX</h4>
-                            <p class="price">Rp 120.000/hari</p>
-                            <p class="specs">150cc • Matic • Premium</p>
-                            <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'PCX')">Reservasi</button>
+                        <div class="slider-controls">
+                            <button class="slider-btn" onclick="previousSlide('hondaSlider')" id="hondaPrev">‹</button>
+                            <div class="slider-dots" id="hondaDots"></div>
+                            <button class="slider-btn" onclick="nextSlide('hondaSlider')" id="hondaNext">›</button>
                         </div>
                     </div>
                 </div>
@@ -80,26 +135,81 @@
                 <div class="category">
                     <h3>Yamaha</h3>
                     <div class="motor-grid">
-                        <div class="motor-card">
-                            <div class="motor-image">🏍️</div>
-                            <h4>Yamaha Mio</h4>
-                            <p class="price">Rp 75.000/hari</p>
-                            <p class="specs">115cc • Matic • Lincah</p>
-                            <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'Mio')">Reservasi</button>
+                        <div class="motor-slider" id="yamahaSlider">
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha Mio</h4>
+                                    <p class="price">Rp 75.000/hari</p>
+                                    <p class="specs">115cc • Matic • Lincah</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'Mio')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha NMAX</h4>
+                                    <p class="price">Rp 110.000/hari</p>
+                                    <p class="specs">155cc • Matic • Sporty</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'NMAX')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha Aerox</h4>
+                                    <p class="price">Rp 100.000/hari</p>
+                                    <p class="specs">155cc • Matic • Racing</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'Aerox')">Reservasi</button>
+                                </div>
+                            </div>
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha Lexi</h4>
+                                    <p class="price">Rp 95.000/hari</p>
+                                    <p class="specs">125cc • Matic • Elegant</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'Lexi')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha FreeGo</h4>
+                                    <p class="price">Rp 90.000/hari</p>
+                                    <p class="specs">125cc • Matic • Reliable</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'FreeGo')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha Gear</h4>
+                                    <p class="price">Rp 85.000/hari</p>
+                                    <p class="specs">125cc • Matic • Urban</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'Gear')">Reservasi</button>
+                                </div>
+                            </div>
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha XMAX</h4>
+                                    <p class="price">Rp 140.000/hari</p>
+                                    <p class="specs">250cc • Matic • Premium</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'XMAX')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha R15</h4>
+                                    <p class="price">Rp 125.000/hari</p>
+                                    <p class="specs">155cc • Manual • Sport</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'R15')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Yamaha MT-15</h4>
+                                    <p class="price">Rp 130.000/hari</p>
+                                    <p class="specs">155cc • Manual • Naked</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'MT-15')">Reservasi</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="motor-card">
-                            <div class="motor-image">🏍️</div>
-                            <h4>Yamaha NMAX</h4>
-                            <p class="price">Rp 110.000/hari</p>
-                            <p class="specs">155cc • Matic • Sporty</p>
-                            <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'NMAX')">Reservasi</button>
-                        </div>
-                        <div class="motor-card">
-                            <div class="motor-image">🏍️</div>
-                            <h4>Yamaha Aerox</h4>
-                            <p class="price">Rp 100.000/hari</p>
-                            <p class="specs">155cc • Matic • Racing</p>
-                            <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'Aerox')">Reservasi</button>
+                        <div class="slider-controls">
+                            <button class="slider-btn" onclick="previousSlide('yamahaSlider')" id="yamahaPrev">‹</button>
+                            <div class="slider-dots" id="yamahaDots"></div>
+                            <button class="slider-btn" onclick="nextSlide('yamahaSlider')" id="yamahaNext">›</button>
                         </div>
                     </div>
                 </div>
@@ -108,19 +218,81 @@
                 <div class="category">
                     <h3>Suzuki</h3>
                     <div class="motor-grid">
-                        <div class="motor-card">
-                            <div class="motor-image">🏍️</div>
-                            <h4>Suzuki Address</h4>
-                            <p class="price">Rp 85.000/hari</p>
-                            <p class="specs">110cc • Matic • Nyaman</p>
-                            <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'Address')">Reservasi</button>
+                        <div class="motor-slider" id="suzukiSlider">
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki Address</h4>
+                                    <p class="price">Rp 85.000/hari</p>
+                                    <p class="specs">110cc • Matic • Nyaman</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'Address')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki NEX</h4>
+                                    <p class="price">Rp 70.000/hari</p>
+                                    <p class="specs">115cc • Matic • Ekonomis</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'NEX')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki Burgman</h4>
+                                    <p class="price">Rp 120.000/hari</p>
+                                    <p class="specs">125cc • Matic • Comfort</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'Burgman')">Reservasi</button>
+                                </div>
+                            </div>
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki GSX-R150</h4>
+                                    <p class="price">Rp 135.000/hari</p>
+                                    <p class="specs">150cc • Manual • Sport</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'GSX-R150')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki GSX-S150</h4>
+                                    <p class="price">Rp 125.000/hari</p>
+                                    <p class="specs">150cc • Manual • Naked</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'GSX-S150')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki Satria F150</h4>
+                                    <p class="price">Rp 115.000/hari</p>
+                                    <p class="specs">150cc • Manual • Street</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'Satria F150')">Reservasi</button>
+                                </div>
+                            </div>
+                            <div class="motor-slide">
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki V-Strom 250</h4>
+                                    <p class="price">Rp 160.000/hari</p>
+                                    <p class="specs">250cc • Manual • Adventure</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'V-Strom 250')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki Inazuma</h4>
+                                    <p class="price">Rp 140.000/hari</p>
+                                    <p class="specs">250cc • Manual • Naked</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'Inazuma')">Reservasi</button>
+                                </div>
+                                <div class="motor-card">
+                                    <div class="motor-image">🏍️</div>
+                                    <h4>Suzuki Jimny</h4>
+                                    <p class="price">Rp 90.000/hari</p>
+                                    <p class="specs">125cc • Matic • Retro</p>
+                                    <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'Jimny')">Reservasi</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="motor-card">
-                            <div class="motor-image">🏍️</div>
-                            <h4>Suzuki NEX</h4>
-                            <p class="price">Rp 70.000/hari</p>
-                            <p class="specs">115cc • Matic • Ekonomis</p>
-                            <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'NEX')">Reservasi</button>
+                        <div class="slider-controls">
+                            <button class="slider-btn" onclick="previousSlide('suzukiSlider')" id="suzukiPrev">‹</button>
+                            <div class="slider-dots" id="suzukiDots"></div>
+                            <button class="slider-btn" onclick="nextSlide('suzukiSlider')" id="suzukiNext">›</button>
                         </div>
                     </div>
                 </div>
@@ -343,116 +515,103 @@
 
     <script src="js/script.js"></script>
     <script>
-        // Character counter
-        const commentText = document.getElementById('commentText');
-        const charCount = document.getElementById('charCount');
-        
-        commentText.addEventListener('input', function() {
-            const count = this.value.length;
-            charCount.textContent = count;
-            
-            if (count > 450) {
-                charCount.style.color = 'var(--accent-color)';
-            } else {
-                charCount.style.color = 'var(--gray-500)';
-            }
-        });
-
-        // Star rating functionality
-        const stars = document.querySelectorAll('.star-rating input');
-        const ratingText = document.querySelector('.rating-text');
-        
-        const ratingLabels = {
-            1: 'Sangat Buruk',
-            2: 'Buruk', 
-            3: 'Cukup',
-            4: 'Baik',
-            5: 'Sangat Baik'
+const sliders = {
+            'hondaSlider': { currentSlide: 0, totalSlides: 3 },
+            'yamahaSlider': { currentSlide: 0, totalSlides: 3 },
+            'suzukiSlider': { currentSlide: 0, totalSlides: 3 }
         };
 
-        stars.forEach(star => {
-            star.addEventListener('change', function() {
-                ratingText.textContent = ratingLabels[this.value];
-                ratingText.style.color = 'var(--primary-color)';
+        // Initialize sliders
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSliders();
+        });
+
+        function initializeSliders() {
+            Object.keys(sliders).forEach(sliderId => {
+                createDots(sliderId);
+                updateSlider(sliderId);
             });
-        });
+        }
 
-        // Form submission
-        document.getElementById('submitBtn').addEventListener('click', function() {
-            const rating = document.querySelector('input[name="rating"]:checked');
-            const testimonial = document.getElementById('commentText').value.trim();
+        function createDots(sliderId) {
+            const dotsContainer = document.getElementById(sliderId.replace('Slider', 'Dots'));
+            const totalSlides = sliders[sliderId].totalSlides;
             
-            if (!rating || !testimonial) {
-                alert('Mohon berikan rating dan tulis testimoni Anda');
-                return;
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'slider-dot';
+                dot.onclick = () => goToSlide(sliderId, i);
+                dotsContainer.appendChild(dot);
             }
-            
-            // Show loading state
-            this.innerHTML = 'Mengirim...';
-            this.disabled = true;
-            
-            // Simulate form submission
-            setTimeout(() => {
-                document.getElementById('commentForm').style.display = 'none';
-                document.getElementById('successMessage').style.display = 'block';
-                
-                // Add new comment to the list
-                addNewComment(rating.value, testimonial);
-                
-                // Reset button
-                this.innerHTML = 'Kirim Testimoni';
-                this.disabled = false;
-            }, 2000);
-        });
-
-        // Add new comment to the list
-        function addNewComment(rating, text) {
-            const commentsContainer = document.querySelector('.comments-container');
-            const starsHtml = '★'.repeat(parseInt(rating)) + '☆'.repeat(5 - parseInt(rating));
-            
-            const newComment = document.createElement('div');
-            newComment.className = 'comment-item';
-            newComment.style.opacity = '0';
-            newComment.innerHTML = `
-                <div class="comment-header">
-                    <div class="comment-avatar">AR</div>
-                    <div class="comment-info">
-                        <h4>Ahmad Rizki</h4>
-                        <div class="comment-meta">
-                            <div class="comment-rating">${starsHtml}</div>
-                            <div class="comment-date">Baru saja</div>
-                        </div>
-                    </div>
-                </div>
-                <p class="comment-text">${text}</p>
-            `;
-            
-            commentsContainer.insertBefore(newComment, commentsContainer.firstChild);
-            
-            // Update comments count
-            const currentCount = document.querySelector('.comments-count');
-            const count = parseInt(currentCount.textContent) + 1;
-            currentCount.textContent = `${count} COMMENTS`;
-            
-            // Animate new comment
-            setTimeout(() => {
-                newComment.style.transition = 'opacity 0.5s ease';
-                newComment.style.opacity = '1';
-            }, 100);
         }
 
-        // Reset form
-        function resetForm() {
-            document.getElementById('successMessage').style.display = 'none';
-            document.getElementById('commentForm').style.display = 'block';
+        function updateSlider(sliderId) {
+            const slider = document.getElementById(sliderId);
+            const currentSlide = sliders[sliderId].currentSlide;
+            const totalSlides = sliders[sliderId].totalSlides;
             
-            // Clear form
-            document.getElementById('commentText').value = '';
-            document.getElementById('charCount').textContent = '0';
-            document.querySelectorAll('input[name="rating"]').forEach(input => input.checked = false);
-            document.querySelector('.rating-text').textContent = 'Pilih rating Anda';
-            document.querySelector('.rating-text').style.color = 'var(--gray-500)';
+            // Update slider position
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            const dotsContainer = document.getElementById(sliderId.replace('Slider', 'Dots'));
+            const dots = dotsContainer.querySelectorAll('.slider-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            
+            // Update navigation buttons
+            const prevBtn = document.getElementById(sliderId.replace('Slider', 'Prev'));
+            const nextBtn = document.getElementById(sliderId.replace('Slider', 'Next'));
+            
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
         }
+
+        function nextSlide(sliderId) {
+            const currentSlide = sliders[sliderId].currentSlide;
+            const totalSlides = sliders[sliderId].totalSlides;
+            
+            if (currentSlide < totalSlides - 1) {
+                sliders[sliderId].currentSlide++;
+                updateSlider(sliderId);
+            }
+        }
+
+        function previousSlide(sliderId) {
+            const currentSlide = sliders[sliderId].currentSlide;
+            
+            if (currentSlide > 0) {
+                sliders[sliderId].currentSlide--;
+                updateSlider(sliderId);
+            }
+        }
+
+        function goToSlide(sliderId, slideIndex) {
+            sliders[sliderId].currentSlide = slideIndex;
+            updateSlider(sliderId);
+        }
+
+        // Auto-slide functionality (optional)
+        function startAutoSlide(sliderId, interval = 5000) {
+            setInterval(() => {
+                const currentSlide = sliders[sliderId].currentSlide;
+                const totalSlides = sliders[sliderId].totalSlides;
+                
+                if (currentSlide < totalSlides - 1) {
+                    nextSlide(sliderId);
+                } else {
+                    sliders[sliderId].currentSlide = 0;
+                    updateSlider(sliderId);
+                }
+            }, interval);
+        }
+
+        // Uncomment to enable auto-slide
+        startAutoSlide('hondaSlider');
+        startAutoSlide('yamahaSlider');
+        startAutoSlide('suzukiSlider');
     </script>
 </body>
 </html>
