@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Motor - Sewa Motor Terpercaya</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <h2>🏍️ RentalMotor</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="#beranda">Beranda</a>
+                    <a href="#motor">Motor</a>
+                    <a href="#testimoni">Testimoni</a>
+                    <a href="#kontak">Kontak</a>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sewa Motor Mudah & Terpercaya</h1>
+                <p>Nikmati perjalanan Anda dengan koleksi motor berkualitas dan pelayanan terbaik. Proses cepat, harga terjangkau!</p>
+                <button class="btn-primary" onclick="openReservasiPopup()">Reservasi Sekarang</button>
+            </div>
+            <div class="hero-image">
+                <div class="motor-placeholder">🏍️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motor Section -->
+    <section id="motor" class="motor-section">
+        <div class="container">
+            <h2>Motor Tersedia</h2>
+            <div class="motor-categories">
+                <!-- Honda -->
+                <div class="category">
+                    <h3>Honda</h3>
+                    <div class="motor-grid">
+                        <div class="motor-card">
+                            <div class="motor-image">🏍️</div>
+                            <h4>Honda Beat</h4>
+                            <p class="price">Rp 80.000/hari</p>
+                            <p class="specs">110cc • Matic • Hemat BBM</p>
+                            <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Beat')">Reservasi</button>
+                        </div>
+                        <div class="motor-card">
+                            <div class="motor-image">🏍️</div>
+                            <h4>Honda Vario</h4>
+                            <p class="price">Rp 90.000/hari</p>
+                            <p class="specs">125cc • Matic • Modern</p>
+                            <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'Vario')">Reservasi</button>
+                        </div>
+                        <div class="motor-card">
+                            <div class="motor-image">🏍️</div>
+                            <h4>Honda PCX</h4>
+                            <p class="price">Rp 120.000/hari</p>
+                            <p class="specs">150cc • Matic • Premium</p>
+                            <button class="btn-reserve" onclick="openReservasiPopup('Honda', 'PCX')">Reservasi</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yamaha -->
+                <div class="category">
+                    <h3>Yamaha</h3>
+                    <div class="motor-grid">
+                        <div class="motor-card">
+                            <div class="motor-image">🏍️</div>
+                            <h4>Yamaha Mio</h4>
+                            <p class="price">Rp 75.000/hari</p>
+                            <p class="specs">115cc • Matic • Lincah</p>
+                            <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'Mio')">Reservasi</button>
+                        </div>
+                        <div class="motor-card">
+                            <div class="motor-image">🏍️</div>
+                            <h4>Yamaha NMAX</h4>
+                            <p class="price">Rp 110.000/hari</p>
+                            <p class="specs">155cc • Matic • Sporty</p>
+                            <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'NMAX')">Reservasi</button>
+                        </div>
+                        <div class="motor-card">
+                            <div class="motor-image">🏍️</div>
+                            <h4>Yamaha Aerox</h4>
+                            <p class="price">Rp 100.000/hari</p>
+                            <p class="specs">155cc • Matic • Racing</p>
+                            <button class="btn-reserve" onclick="openReservasiPopup('Yamaha', 'Aerox')">Reservasi</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suzuki -->
+                <div class="category">
+                    <h3>Suzuki</h3>
+                    <div class="motor-grid">
+                        <div class="motor-card">
+                            <div class="motor-image">🏍️</div>
+                            <h4>Suzuki Address</h4>
+                            <p class="price">Rp 85.000/hari</p>
+                            <p class="specs">110cc • Matic • Nyaman</p>
+                            <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'Address')">Reservasi</button>
+                        </div>
+                        <div class="motor-card">
+                            <div class="motor-image">🏍️</div>
+                            <h4>Suzuki NEX</h4>
+                            <p class="price">Rp 70.000/hari</p>
+                            <p class="specs">115cc • Matic • Ekonomis</p>
+                            <button class="btn-reserve" onclick="openReservasiPopup('Suzuki', 'NEX')">Reservasi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="testimoni-section">
+        <div class="container">
+            <h2>Testimoni Pelanggan</h2>
+            <div class="testimoni-grid" id="testimoniGrid">
+                <!-- Testimoni akan diisi oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏍️ RentalMotor</h3>
+                    <p>Sewa motor terpercaya untuk perjalanan Anda</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>📱 +62 812-3456-7890</p>
+                    <p>📧 info@rentalmotor.com</p>
+                    <p>📍 Bekasi, Jawa Barat</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Minggu: 08:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RentalMotor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Reservasi -->
+    <div id="reservasiPopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Form Reservasi Motor</h3>
+                <button class="close-btn" onclick="closeReservasiPopup()">&times;</button>
+            </div>
+            <form id="reservasiForm" class="popup-form">
+                <div class="form-group">
+                    <label>Merk Motor:</label>
+                    <select id="merkMotor" onchange="updateTipeMotor()">
+                        <option value="">Pilih Merk</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Yamaha">Yamaha</option>
+                        <option value="Suzuki">Suzuki</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Tipe Motor:</label>
+                    <select id="tipeMotor">
+                        <option value="">Pilih Tipe</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nama Lengkap:</label>
+                    <input type="text" id="namaLengkap" placeholder="Nama sesuai KTP">
+                </div>
+                <div class="form-group">
+                    <label>No. HP:</label>
+                    <input type="tel" id="noHp" placeholder="08123456789">
+                </div>
+                <div class="form-group">
+                    <label>Tanggal Sewa:</label>
+                    <input type="date" id="tanggalSewa">
+                </div>
+                <div class="form-group">
+                    <label>Lama Sewa (hari):</label>
+                    <input type="number" id="lamaSewa" min="1" placeholder="1">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeReservasiPopup()">Batal</button>
+                    <button type="submit" class="btn-submit">Lanjut ke Pembayaran</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

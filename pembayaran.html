@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - Rental Motor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <h2>🏍️ RentalMotor</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Beranda</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="margin-top: 100px; padding: 50px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="pembayaran-container" style="max-width: 800px; margin: 0 auto;">
+                
+                <!-- Header Pembayaran -->
+                <div class="pembayaran-header" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <h1 style="color: #667eea; text-align: center; margin-bottom: 1rem;">💳 Pembayaran</h1>
+                    <p style="text-align: center; color: #666;">Silakan lakukan pembayaran sesuai dengan detail di bawah ini</p>
+                </div>
+
+                <!-- Ringkasan Reservasi -->
+                <div class="ringkasan-reservasi" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <h2 style="color: #333; margin-bottom: 1.5rem; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">📋 Ringkasan Reservasi</h2>
+                    
+                    <div class="detail-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="detail-item">
+                            <strong>Motor:</strong>
+                            <p id="motorDetail">Honda Beat</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Nama Penyewa:</strong>
+                            <p id="namaDetail">Budi Santoso</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Tanggal Sewa:</strong>
+                            <p id="tanggalDetail">21 Juni 2025</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Lama Sewa:</strong>
+                            <p id="lamaDetail">3 hari</p>
+                        </div>
+                    </div>
+                    
+                    <div class="total-harga" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 10px; text-align: center;">
+                        <h3>Total Pembayaran</h3>
+                        <p style="font-size: 2rem; font-weight: bold; margin: 0.5rem 0;" id="totalHarga">Rp 240.000</p>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">Sudah termasuk biaya administrasi</p>
+                    </div>
+                </div>
+
+                <!-- Info Pembayaran -->
+                <div class="info-pembayaran" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <h2 style="color: #333; margin-bottom: 1.5rem; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">🏦 Informasi Pembayaran</h2>
+                    
+                    <div class="bank-info" style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #667eea;">
+                        <h3 style="color: #667eea; margin-bottom: 1rem;">Transfer Bank</h3>
+                        <div class="bank-details">
+                            <p><strong>Bank:</strong> BCA (Bank Central Asia)</p>
+                            <p><strong>No. Rekening:</strong> <span style="font-size: 1.2rem; color: #ff6b6b; font-weight: bold;">1234567890</span></p>
+                            <p><strong>Atas Nama:</strong> PT. Rental Motor Indonesia</p>
+                        </div>
+                        
+                        <div class="payment-instructions" style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                            <h4 style="color: #333; margin-bottom: 1rem;">📝 Petunjuk Pembayaran:</h4>
+                            <ol style="padding-left: 1.5rem; line-height: 1.6;">
+                                <li>Transfer sesuai nominal yang tertera</li>
+                                <li>Simpan bukti transfer</li>
+                                <li>Upload bukti transfer di form di bawah</li>
+                                <li>Klik "Konfirmasi Pembayaran"</li>
+                                <li>Tunggu konfirmasi dari tim kami via WhatsApp</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Upload Bukti -->
+                <div class="upload-bukti" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h2 style="color: #333; margin-bottom: 1.5rem; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">📤 Upload Bukti Pembayaran</h2>
+                    
+                    <form id="pembayaranForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="buktiPembayaran">Pilih File Bukti Transfer:</label>
+                            <input type="file" id="buktiPembayaran" accept="image/*" required onchange="displayFileName(this, 'buktiFileName')">
+                            <div id="buktiFileName" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;"></div>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">
+                                Format yang diterima: JPG, PNG, PDF (Max. 5MB)
+                            </p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="catatanTambahan">Catatan Tambahan (Opsional):</label>
+                            <textarea id="catatanTambahan" rows="3" placeholder="Tuliskan catatan jika ada..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions" style="margin-top: 2rem;">
+                            <button type="button" class="btn-cancel" onclick="window.location.href='index.html'">Batal</button>
+                            <button type="submit" class="btn-submit">Konfirmasi Pembayaran</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Info Tambahan -->
+                <div class="info-tambahan" style="background: #fff3cd; border: 1px solid #ffeeba; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                    <h4 style="color: #856404; margin-bottom: 1rem;">⚠️ Informasi Penting:</h4>
+                    <ul style="color: #856404; padding-left: 1.5rem; line-height: 1.6;">
+                        <li>Pembayaran harus dilakukan dalam 24 jam</li>
+                        <li>Motor akan dikonfirmasi setelah pembayaran terverifikasi</li>
+                        <li>Jika ada kendala, hubungi customer service kami</li>
+                        <li>Pembayaran yang sudah masuk tidak dapat dikembalikan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏍️ RentalMotor</h3>
+                    <p>Sewa motor terpercaya untuk perjalanan Anda</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <p>📱 +62 812-3456-7890</p>
+                    <p>📧 cs@rentalmotor.com</p>
+                    <p>🕒 24/7 Online</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RentalMotor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Simulate loading reservation data
+        document.addEventListener('DOMContentLoaded', function() {
+            // This would normally load from localStorage or API
+            const sampleData = {
+                motor: 'Honda Beat',
+                nama: 'Budi Santoso',
+                tanggal: '21 Juni 2025',
+                lama: '3 hari',
+                total: 'Rp 240.000'
+            };
+            
+            document.getElementById('motorDetail').textContent = sampleData.motor;
+            document.getElementById('namaDetail').textContent = sampleData.nama;
+            document.getElementById('tanggalDetail').textContent = sampleData.tanggal;
+            document.getElementById('lamaDetail').textContent = sampleData.lama;
+            document.getElementById('totalHarga').textContent = sampleData.total;
+        });
+    </script>
+</body>
+</html>

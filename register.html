@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Rental Motor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-container" style="max-width: 500px;">
+            <div class="auth-header">
+                <h1>🏍️ RentalMotor</h1>
+                <h2>Daftar Akun Baru</h2>
+                <p>Buat akun untuk menikmati layanan kami</p>
+            </div>
+            
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" placeholder="contoh@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regPassword">Password:</label>
+                    <input type="password" id="regPassword" placeholder="Minimal 6 karakter" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Konfirmasi Password:</label>
+                    <input type="password" id="confirmPassword" placeholder="Ulangi password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regNamaLengkap">Nama Lengkap (sesuai KTP):</label>
+                    <input type="text" id="regNamaLengkap" placeholder="Nama lengkap sesuai KTP" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regNoHp">No. HP:</label>
+                    <input type="tel" id="regNoHp" placeholder="08123456789" required>
+                </div>
+                
+                <h3 style="color: #667eea; margin: 2rem 0 1rem 0;">Alamat Lengkap</h3>
+                
+                <div class="form-group">
+                    <label for="dusun">Dusun/Jalan:</label>
+                    <input type="text" id="dusun" placeholder="Nama dusun atau jalan" required>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="rt">RT:</label>
+                        <input type="text" id="rt" placeholder="001" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rw">RW:</label>
+                        <input type="text" id="rw" placeholder="001" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="desa">Desa/Kelurahan:</label>
+                    <input type="text" id="desa" placeholder="Nama desa/kelurahan" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="kecamatan">Kecamatan:</label>
+                    <input type="text" id="kecamatan" placeholder="Nama kecamatan" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="kota">Kota/Kabupaten:</label>
+                    <input type="text" id="kota" placeholder="Nama kota/kabupaten" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="provinsi">Provinsi:</label>
+                    <select id="provinsi" required>
+                        <option value="">Pilih Provinsi</option>
+                        <option value="Jawa Barat">Jawa Barat</option>
+                        <option value="DKI Jakarta">DKI Jakarta</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Timur">Jawa Timur</option>
+                        <option value="Banten">Banten</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                        <option value="Sumatera Utara">Sumatera Utara</option>
+                        <option value="Sumatera Barat">Sumatera Barat</option>
+                        <option value="Bali">Bali</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fotoKtp">Upload Foto KTP:</label>
+                    <input type="file" id="fotoKtp" accept="image/*" required onchange="displayFileName(this, 'ktpFileName')">
+                    <div id="ktpFileName" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;"></div>
+                </div>
+                
+                <div class="form-group" style="margin-top: 2rem;">
+                    <button type="submit" class="btn-submit">Daftar Sekarang</button>
+                </div>
+            </form>
+            
+            <div class="auth-links">
+                <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+                <p><a href="index.html">Kembali ke Beranda</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Rental Motor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>🏍️ RentalMotor</h1>
+                <h2>Masuk ke Akun Anda</h2>
+                <p>Silakan masuk untuk melanjutkan</p>
+            </div>
+            
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="contoh@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Masukkan password" required>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Masuk</button>
+                </div>
+            </form>
+            
+            <div class="auth-links">
+                <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+                <p><a href="index.html">Kembali ke Beranda</a></p>
+            </div>
+            
+            <div class="demo-accounts" style="margin-top: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #667eea;">
+                <h4 style="margin: 0 0 1rem 0; color: #667eea;">Demo Akun:</h4>
+                <p style="margin: 0.25rem 0; font-size: 0.9rem;"><strong>Admin:</strong> admin@rentalmotor.com / admin123</p>
+                <p style="margin: 0.25rem 0; font-size: 0.9rem;"><strong>User:</strong> user@email.com / password123</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
